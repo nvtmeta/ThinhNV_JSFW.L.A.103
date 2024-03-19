@@ -1,0 +1,105 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+body {
+    height: 100%;
+}
+
+.btn_primary {
+    background-color: #5CB85C;
+}
+
+.btn_primary:active {
+    background-color: #449d44 !important;
+}
+
+
+
+.btn_primary:hover {
+    background-color: #449d44;
+}
+
+.card-header {
+    font-weight: 600;
+}
+
+.container_form {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+
+    margin: auto;
+}
+
+.logo {
+    color: #B1AFB4;
+    text-decoration: none;
+}
+
+.btn_userProfile {
+    border-bottom: 1px solid #B1AFB4;
+}
+
+.nav_container {
+    background-color: #F8F8F8;
+    border: 1px solid #B1AFB4;
+}
+
+.sidebar_container {
+    background-color: #F0F0F0;
+    /* width: 300px; */
+    height: 100vh;
+}
+
+.sidebar_menu_item {
+    border-top: 1px solid #B1AFB4;
+    border-bottom: 1px solid #B1AFB4;
+}
+
+.sidebar_menu_item:first-child {
+    border-bottom: none
+}
+
+.btn_icon_search {
+    border: 1px solid #B1AFB4;
+}
+
+.container_content {
+    /* width: 90rem; */
+    background-color: white;
+    height: 100vh;
+    padding: 20px;
+    padding-left: 30px;
+}
+
+.submit_btn_form,
+.reset_btn_form {
+    border: 1px solid #B1AFB4;
+    padding: 6px;
+    border-radius: 5px;
+    background-color: white;
+}
+
+.label_form_content {
+    font-weight: 600;
+    padding-bottom: 5px;
+}
+
+.heading_form_content {
+    border-bottom: 1px solid #B1AFB4;
+}
+
+.sidebar_menu_item.active{
+    background-color: #e0e0e0;
+}
+
+.view_content_table{
+}
+
+.error-message{
+    color: red;
+}

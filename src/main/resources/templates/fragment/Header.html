@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Header</title>
+</head>
+<body>
+<!-- begin nav -->
+<ul class="nav px-2 nav_container flex justify-content-between align-items-center">
+    <div>
+        <a href="./view-content.html" class="logo  fs-3">CMS</a>
+    </div>
+    <div class="dropdown">
+        <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown"
+                aria-expanded="false">
+            <i class="bi bi-person-fill"></i>
+        </button>
+        <ul class="dropdown-menu w-20 shadow overflow-hidden">
+            <li class="d-flex dropdown-item mb-2 w-100 btn_userProfile  gap-1  px-2
+                     gap-0 align-items-center  ">
+                <i class="bi bi-person-fill ms-3"></i>
+                <a class="text-decoration-none text-muted " href="/profile">User
+                    Profile</a>
+            </li>
+            <button id="dropdown_item_logout"
+                    class="d-flex dropdown-item mt-2 gap-1  px-2 gap-0 align-items-center ms-3">
+                <i class="bi bi-box-arrow-right "></i>
+                <span class="text-decoration-none text-muted">Logout</span>
+            </button>
+        </ul>
+    </div>
+</ul>
+<!-- end nav -->
+</body>
+</html>
