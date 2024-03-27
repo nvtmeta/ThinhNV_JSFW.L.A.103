@@ -5,6 +5,7 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import org.hibernate.annotations.CreationTimestamp;
+import org.hibernate.annotations.Nationalized;
 import org.hibernate.annotations.UpdateTimestamp;
 
 import java.time.LocalDateTime;
@@ -19,31 +20,27 @@ public class Content {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
 
-
-//    Title
+    @Nationalized
     @Column(name = "Title", nullable = false)
     private String title;
 
-//    Brief
+    @Nationalized
     @Column(name = "Brief", nullable = false)
     private String brief;
 
-//    Content
+    @Nationalized
     @Column(name = "Content", nullable = false)
     private String content;
 
-//    AuthorId
 
     @ManyToOne(cascade = CascadeType.ALL)
     @JoinColumn(name = "AuthorId", nullable = false)
     private Member author;
 
-//    CreatedDate
     @Column(name = "CreatedDate")
     @CreationTimestamp
     private LocalDateTime createdDate;
 
-//    UpdatedTime
     @Column(name = "UpdatedTime")
     @UpdateTimestamp
     private LocalDateTime updatedTime;

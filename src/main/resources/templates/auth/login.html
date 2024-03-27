@@ -12,16 +12,16 @@
 </head>
 
 <body>
-<form id="login_form" class="container_form h-100 d-flex justify-content-center align-items-center h-100 w-100">
+<form th:action="@{/login}" method="post" th:object="${user}" id="login_form" class="container_form h-100 d-flex justify-content-center align-items-center h-100 w-100">
     <div class="card" style="width: 25rem;">
         <div class="card-header">Please Sign In</div>
         <div class="card-body">
             <div class="mb-3">
-                <input size="50" type="email" class="form-control text-muted " id="email_input"
+                <input th:field="*{email}" size="50" type="email" class="form-control text-muted " id="email_input"
                        placeholder="E-mail">
             </div>
             <div class="mb-3">
-                <input size="50" type="password" class="form-control text-muted" id="password_input"
+                <input th:field="*{password}" size="50" type="password" class="form-control text-muted" id="password_input"
                        placeholder="Password">
             </div>
             <div class="form-check">
