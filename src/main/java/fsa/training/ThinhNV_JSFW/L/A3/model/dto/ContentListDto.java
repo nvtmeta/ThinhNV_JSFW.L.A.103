@@ -1,13 +1,8 @@
 package fsa.training.ThinhNV_JSFW.L.A3.model.dto;
 
-import fsa.training.ThinhNV_JSFW.L.A3.model.entity.Member;
-import jakarta.persistence.*;
-import lombok.AllArgsConstructor;
 import lombok.Getter;
-import lombok.NoArgsConstructor;
 import lombok.Setter;
-import org.hibernate.annotations.CreationTimestamp;
-import org.hibernate.annotations.UpdateTimestamp;
+import org.springframework.format.annotation.DateTimeFormat;
 
 import java.time.LocalDateTime;
 
@@ -15,12 +10,16 @@ import java.time.LocalDateTime;
 @Setter
 public class ContentListDto {
 
+    private int id;
+
     private String title;
 
     private String brief;
-    private String createdDate;
 
-    public ContentListDto(String title,  String brief, String createdDate) {
+    private LocalDateTime createdDate;
+
+    public ContentListDto(int id, String title, String brief, LocalDateTime createdDate) {
+        this.id = id;
         this.title = title;
         this.brief = brief;
         this.createdDate = createdDate;

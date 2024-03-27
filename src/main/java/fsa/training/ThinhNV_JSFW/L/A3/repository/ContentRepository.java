@@ -14,7 +14,7 @@ import org.springframework.stereotype.Repository;
 public interface ContentRepository extends JpaRepository<Content, Integer> {
 
     //    search q is optional, if not, then get all
-    @Query("SELECT new fsa.training.ThinhNV_JSFW.L.A3.model.dto.ContentListDto(c.title, c.brief, CAST(c.createdDate AS string))" +
+    @Query("SELECT new fsa.training.ThinhNV_JSFW.L.A3.model.dto.ContentListDto(c.id, c.title, c.brief, c.createdDate)" +
             "  FROM Content c WHERE c.title LIKE %:q% OR c.brief LIKE %:q% " +
             "OR :q IS NULL ")
     Page<ContentListDto> findAllDto(@Param("q") String q, Pageable pageable);

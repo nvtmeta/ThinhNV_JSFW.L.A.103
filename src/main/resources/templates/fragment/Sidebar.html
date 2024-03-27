@@ -8,21 +8,30 @@
 <sidebar class="w-20">
     <div class=" sidebar_container">
         <div class="input-group p-4 ">
-            <input type="search" class="form-control border border-secondary " aria-label="Search"
-                   placeholder="Search">
-            <div class="px-3 p-2 btn_icon_search">
+            <form class="d-flex" th:action="@{/view-content}">
+                <input
+                        name="q" th:value="${param.q}"
+                        type="search" class="form-control border border-secondary rounded-0" aria-label="Search"
+                        placeholder="Search">
+                <button type="submit" class="px-3 p-2 btn_icon_search">
                 <i class="bi bi-search"></i>
-            </div>
+                </button>
+            </form>
         </div>
         <!-- item menu -->
         <div class="d-flex flex-column justify-content-center w-100">
-            <div class="sidebar_menu_item p-3">
-                <a class="text-decoration-none" href="./view-content">
+            <div
+                    th:classappend="${contentList != null ? 'active' : ''}"
+                    class="sidebar_menu_item p-3">
+                <a
+                        class="text-decoration-none" href="./view-content">
                     <i class="bi bi-table"></i>
                     <span>View contents</span>
                 </a>
             </div>
-            <div class="sidebar_menu_item p-3 gap-2">
+            <div
+                    th:classappend="${contentList == null ? 'active' : ''}"
+                    class="sidebar_menu_item p-3 gap-2">
                 <a class="text-decoration-none" href="./add-content">
                     <i class="bi bi-pencil-square"></i>
                     <span>Form content</span>
